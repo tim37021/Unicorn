@@ -1,0 +1,59 @@
+* Introduction
+  Unicorn, a new editor inspired from VSCode(Visual Studio Code) and Emacs. Using QML as its main
+language for declarative UI development.
+  Emacs is an infinite extendible editor, thus it's often called an OS by its lovers. How-
+ever, users should learn Emacs Lisp to be able to fully control Emacs. Despite the fact how 
+easy and beautiful is Lisp, lisp syntax looks old for people nowadays.
+  This project aim to provide easy plugin development framework and remains highly customizability.
+
+
+* RichTextEditor Tasks
+** TODO Basic Key Binding [4/6]
+   - [X] Home
+   - [X] End
+   - [X] Insert
+   - [X] Delete
+   - [ ] Paste
+   - [ ] Copy
+** DONE Insert/Replace Mode [2/2]
+   DEADLINE: <2020-05-03 週日>
+   - [X] Insert Mode
+   - [X] Replace Mode
+** TODO Selectable text
+   SCHEDULED: <2020-05-01 週五> DEADLINE: <2020-05-03 週日>
+   selectionStart, selectionEnd, includes rendering
+** Partial Rendering [0/2]
+   - [ ] Partial Rendering (Culling)
+   - [ ] Pgdn/Pgup
+** TODO Wheel Control
+   Control to scroll and text cursor
+** TODO Scrollable RichTextRenderer
+   The original TextArea grows with its text document. This approach is not suitable for 
+canvas based rendering.
+   Prevent from reinventing ScrollView is possible, but I haven't comes out complete solu-
+tion to this.
+** TODO Seperate editing logic from RichTextRenderer
+   Currently, TextControl class provide editing logic for demo, thus it is placed in RichTextRenderer.
+** TODO Buffer class
+   Buffer class is a generic class for data source, which can be used as sharable display buffer for editor.   
+   Support input methods. 
+** TODO Preview
+   Complete preview framework. Editor will emit a preview signal which previewer can catch for preview
+** TODO Completion
+   Complete completion framework. Emit complete signal after few milisecond when specified characters 
+are inserted
+** TODO Refactor SyntaxHighlighter
+   QMLSyntaxHighlighter is a lexer-based toy highlighter for demo currently. This task is to
+complete the framework of declarative SyntaxHighlighter. Rewrite QMLSyntaxHighlighter as an
+example.
+** TODO Support Multi-cursor
+   TextControl provides editing interface but it also acted like a cursor control. It's name is confusing.
+* RichTextEditor Backlog
+** TODO IME Handling
+** TODO Support Image
+
+
+* Console Tasks
+** TODO IPC Framework
+** TODO RichTextEditor for Display
+
